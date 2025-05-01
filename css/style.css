@@ -1,0 +1,149 @@
+/* Importa a fonte Poppins novamente para CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+:root {
+  --dark: #ffffff;      /* Cor de texto escuro */
+  --green: #2ecc71;  /* Verde principal */
+  --gray: #000000;      /* Cinza para textos secundários */
+  --light-gray: #f7f7f7; /* Fundo claro */
+}
+/* Zera margens e paddings e define box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Aplica fonte */
+}
+body {
+  background-color: #f2f2f2; /* Cor de fundo geral */
+}
+.container {
+  display: flex;   /* Flexbox para painéis lado a lado */
+  height: 100vh;   /* Altura total da viewport */
+}
+.left-panel {
+  flex: 1; /* Ocupa metade do espaço */
+  background: linear-gradient(135deg, #16a085, #1abc9c); /* Gradiente */
+  color: #fff; /* Texto branco */
+  display: flex;
+  flex-direction: column; /* Conteúdo vertical */
+  justify-content: center; /* Centraliza verticalmente */
+  padding: 2rem; /* Espaçamento interno */
+}
+.left-panel ul {
+  list-style: none; /* Remove marcadores padrão */
+  margin-top: 1rem; /* Espaço acima da lista */
+}
+.left-panel li {
+  font-size: 1rem;   /* Tamanho de texto */
+  margin-bottom: 0.5rem; /* Espaço entre itens */
+  display: flex;
+  align-items: center; /* Alinha emoji e texto */
+}
+.right-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centraliza formulário */
+  background: var(--light-gray);
+  padding: 2rem;
+}
+.form-container {
+  background: #fff;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra */
+}
+h2 {
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+p {
+  margin-bottom: 1rem;
+  color: var(--gray);
+}
+.form-label {
+  display: block; /* Coloca label em bloco */
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+.login-form input, .register-form input {
+  width: 100%; /* Largura total do contêiner */
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc; /* Borda clara */
+  border-radius: 5px;
+}
+.login-form button, .register-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Mãozinha ao passar */
+  font-weight: 500;
+  transition: background 0.3s; /* Animação suave */
+}
+.login-form button:hover, .register-form button:hover {
+  background: #27ae60; /* Verde mais escuro ao passar */
+}
+.form-options {
+  display: flex; 
+  justify-content: space-between; /* Espaça checkbox e link */
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.form-options label { 
+  display: flex;
+  align-items: center; /* Alinha checkbox */
+  margin-right: 0.5rem;  /* Espaço entre checkbox e texto */
+}
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+} 
+.social {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  transition: background 0.3s;
+}
+.social:hover {
+  background: #f0f0f0;
+}
+.social.google::before {
+  content: 'G'; /* Simboliza Google */
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: #db4437; /* Vermelho Google */
+}
+.social.facebook::before {
+  content: 'f'; /* Simboliza Facebook */
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: #3b5998; /* Azul Facebook */
+}
+.toggle-text {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+.toggle-text a {
+  color: var(--green);
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+}
+.toggle-text a:hover {
+  text-decoration: underline;
+}

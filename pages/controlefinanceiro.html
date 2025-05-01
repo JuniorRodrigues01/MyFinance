@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Controle Financeiro</title>
+  <link rel="stylesheet" href="../css/controle.css" />
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="container">
+    <h1><i data-lucide="wallet"></i> Controle Financeiro</h1>
+    <h2 id="boas-vindas"></h2>
+
+    <!-- Filtros -->
+    <label for="filtroMes" style="margin-bottom: 10px; display: block; text-align: center;">
+      Filtrar por mês:
+      <input type="month" id="filtroMes" />
+    </label>
+    <label for="filtroCategoria" style="display: block; margin-bottom: 20px; text-align: center;">
+      Filtrar por categoria:
+      <select id="filtroCategoria">
+        <option value="todas">Todas</option>
+      </select>
+    </label>
+
+    <!-- Botões -->
+    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px;">
+      <button id="logout"><i data-lucide="log-out"></i> Sair</button>
+      <button id="definir-orcamento"><i data-lucide="wallet"></i> Definir Orçamento</button>
+      <button id="fechar-mes"><i data-lucide="calendar-check"></i> Fechar Mês</button>
+    </div>
+
+    <!-- Formulário -->
+    <form id="form-transacao">
+      <input type="text" id="descricao" placeholder="Descrição" required />
+      <input type="text" id="categoria" placeholder="Categoria" required />
+      <input type="number" id="valor" placeholder="Valor" required />
+      <input type="date" id="data" required />
+      <select id="tipo" required>
+        <option value="entrada">Entrada</option>
+        <option value="saida">Saída</option>
+      </select>
+      <button type="submit"><i data-lucide="plus-circle"></i> Adicionar Transação</button>
+    </form>
+
+    <!-- Resumo -->
+    <h2>Resumo</h2>
+    <p id="saldo"></p>
+    <p id="entradas"></p>
+    <p id="saidas"></p>
+    <p id="orcamento"></p>
+
+    <!-- Gráficos -->
+    <h2>Gráficos</h2>
+    <canvas id="graficoEntradasSaidas"></canvas>
+    <canvas id="graficoCategorias" style="margin-top: 20px;"></canvas>
+
+    <!-- Calendário -->
+    <h2>Calendário de Gastos</h2>
+    <div id="calendar"></div>
+
+    <!-- Lista de transações -->
+    <h2>Transações</h2>
+    <ul id="lista-transacoes"></ul>
+
+    <!-- Link para histórico -->
+    <a href="historico.html" style="display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 40px;">
+      <i data-lucide="history"></i> Ver Histórico
+    </a>
+  </div>
+
+  <!-- Modal de detalhes -->
+  <div id="modal-detalhes">
+    <div>
+      <h3>Detalhes da Transação</h3>
+      <p id="modal-conteudo"></p>
+      <button onclick="fecharModal()">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../js/controle.js"></script>
+  <script> lucide.createIcons(); </script>
+</body>
+</html>

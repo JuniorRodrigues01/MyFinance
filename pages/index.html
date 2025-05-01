@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- Declara que este documento está usando HTML5 -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/> <!-- Define a codificação de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Ajusta a escala para dispositivos móveis -->
+  <title>MyFinance | Controle Financeiro</title> <!-- Texto exibido na aba do navegador -->
+  <!-- Importa fonte Poppins via Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <!-- Vincula o arquivo de estilos CSS externo -->
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body> <!-- Início do conteúdo visível da página -->
+  <div class="container"> <!-- Container principal que agrupa os painéis -->
+    <div class="left-panel"> <!-- Painel esquerdo informativo -->
+      <h1>MyFinance</h1> <!-- Título principal -->
+      <h2>Controle suas finanças de forma simples</h2> <!-- Subtítulo -->
+      <p>Acompanhe seus gastos, economize dinheiro e alcance seus objetivos financeiros.</p> <!-- Descrição -->
+      <ul> <!-- Lista de benefícios com imagens (emojis como ícones) -->
+        <li>📊 Relatórios completos</li>
+        <li>🔔 Alertas personalizados</li>
+        <li>🔒 Segurança garantida</li>
+      </ul>
+    </div>
+    <div class="right-panel"> <!-- Painel direito com formulários -->
+      <div class="form-container"> <!-- Envolve ambos formulários -->
+        <div id="loginSection"> <!-- Seção de login visível inicialmente -->
+          <h2>Bem-vindo de volta</h2> <!-- Título da seção -->
+          <p>Por favor, faça login para acessar sua conta</p> <!-- Instruções -->
+          <form class="login-form" onsubmit="return handleLogin(event)"> <!-- Formulário de login -->
+            <label class="form-label" for="email">E-mail</label> <!-- Label para o input de e-mail -->
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required/> <!-- Campo de e-mail -->
+            <label class="form-label" for="senha">Senha</label> <!-- Label para senha -->
+            <input type="password" id="senha" name="senha" placeholder="*******" required/> <!-- Campo de senha -->
+            <div class="form-options"> <!-- Opções adicionais -->
+              <label><input type="checkbox" id="rememberMe"/> Lembrar de mim</label> <!-- Checkbox 'lembrar de mim' -->
+              <a href="#" id="forgotLink">Esqueceu a senha?</a> <!-- Link para recuperação de senha -->
+            </div>
+            <button type="submit">Entrar</button> <!-- Botão de envio -->
+          </form>
+          <div class="social-buttons"> <!-- Botões sociais apenas estéticos -->
+            <button class="social google">Continuar com Google</button>
+            <button class="social facebook">Continuar com Facebook</button>
+          </div>
+          <p class="toggle-text">Não tem uma conta? <a onclick="showRegister()">Cadastre-se</a></p> <!-- Alterna para cadastro -->
+        </div>
+        <div id="registerSection" style="display:none;"> <!-- Seção de cadastro oculta inicialmente -->
+          <h2>Cadastre-se</h2>
+          <p>Crie sua nova conta</p>
+          <form class="register-form" onsubmit="return handleRegister(event)"> <!-- Formulário de cadastro -->
+            <label class="form-label" for="regEmail">E-mail</label>
+            <input type="email" id="regEmail" name="regEmail" placeholder="seu@email.com" required/>
+            <label class="form-label" for="regSenha">Senha</label>
+            <input type="password" id="regSenha" name="regSenha" placeholder="*******" required/>
+            <button type="submit">Cadastrar</button>
+          </form>
+          <p class="toggle-text">Já tem uma conta? <a onclick="showLogin()">Entrar</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Inclui o arquivo de script JavaScript -->
+  <script src="../js/script.js"></script>
+</body>
+</html>
