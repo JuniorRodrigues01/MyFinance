@@ -49,7 +49,7 @@ function handleLogin(event) {
     const user = users.find(u => u.email === email && u.senha === senha);
     if (user) {
         localStorage.setItem('usuarioLogado', JSON.stringify(user));
-        window.location.href = "controlefinanceiro.html";
+        window.location.href = "../pagen/controlefinanceiro.html";
     } else {
         alert('Email ou senha incorretos!');
     }
