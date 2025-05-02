@@ -2,7 +2,7 @@ let usuario = JSON.parse(localStorage.getItem('usuarioLogado')) || { transacoes:
 let transacoes = usuario.transacoes || [];
 let graficoEntradasSaidas, graficoCategorias, calendario;
 
-// Filtros
+
 const filtroMesInput = document.getElementById('filtroMes');
 const filtroCategoriaInput = document.getElementById('filtroCategoria');
 

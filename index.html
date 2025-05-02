@@ -1,43 +1,43 @@
-<!DOCTYPE html> <!-- Declara que este documento está usando HTML5 -->
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/> <!-- Define a codificação de caracteres como UTF-8 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Ajusta a escala para dispositivos móveis -->
-  <title>MyFinance | Controle Financeiro</title> <!-- Texto exibido na aba do navegador -->
-  <!-- Importa fonte Poppins via Google Fonts -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyFinance | Controle Financeiro</title> 
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <!-- Vincula o arquivo de estilos CSS externo -->
-  <link rel="stylesheet" href="../css/style.css"/>
+
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body> <!-- Início do conteúdo visível da página -->
-  <div class="container"> <!-- Container principal que agrupa os painéis -->
-    <div class="left-panel"> <!-- Painel esquerdo informativo -->
-      <h1>MyFinance</h1> <!-- Título principal -->
-      <h2>Controle suas finanças de forma simples</h2> <!-- Subtítulo -->
-      <p>Acompanhe seus gastos, economize dinheiro e alcance seus objetivos financeiros.</p> <!-- Descrição -->
-      <ul> <!-- Lista de benefícios com imagens (emojis como ícones) -->
+<body> 
+  <div class="container">
+    <div class="left-panel">
+      <h1>MyFinance</h1> 
+      <h2>Controle suas finanças de forma simples</h2>
+      <p>Acompanhe seus gastos, economize dinheiro e alcance seus objetivos financeiros.</p>
+      <ul> 
         <li>📊 Relatórios completos</li>
         <li>🔔 Alertas personalizados</li>
         <li>🔒 Segurança garantida</li>
       </ul>
     </div>
-    <div class="right-panel"> <!-- Painel direito com formulários -->
-      <div class="form-container"> <!-- Envolve ambos formulários -->
-        <div id="loginSection"> <!-- Seção de login visível inicialmente -->
-          <h2>Bem-vindo de volta</h2> <!-- Título da seção -->
-          <p>Por favor, faça login para acessar sua conta</p> <!-- Instruções -->
-          <form class="login-form" onsubmit="return handleLogin(event)"> <!-- Formulário de login -->
-            <label class="form-label" for="email">E-mail</label> <!-- Label para o input de e-mail -->
-            <input type="email" id="email" name="email" placeholder="seu@email.com" required/> <!-- Campo de e-mail -->
-            <label class="form-label" for="senha">Senha</label> <!-- Label para senha -->
-            <input type="password" id="senha" name="senha" placeholder="*******" required/> <!-- Campo de senha -->
-            <div class="form-options"> <!-- Opções adicionais -->
-              <label><input type="checkbox" id="rememberMe"/> Lembrar de mim</label> <!-- Checkbox 'lembrar de mim' -->
-              <a href="#" id="forgotLink">Esqueceu a senha?</a> <!-- Link para recuperação de senha -->
+    <div class="right-panel">
+      <div class="form-container">
+        <div id="loginSection"> 
+          <h2>Bem-vindo de volta</h2>
+          <p>Por favor, faça login para acessar sua conta</p>
+          <form class="login-form" onsubmit="return handleLogin(event)">
+            <label class="form-label" for="email">E-mail</label> 
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required/>
+            <label class="form-label" for="senha">Senha</label> 
+            <input type="password" id="senha" name="senha" placeholder="*******" required/> 
+            <div class="form-options"> 
+              <label><input type="checkbox" id="rememberMe"/> Lembrar de mim</label>
+              <a href="#" id="forgotLink">Esqueceu a senha?</a> 
             </div>
-            <button type="submit">Entrar</button> <!-- Botão de envio -->
+            <button type="submit">Entrar</button> 
           </form>
-          <div class="social-buttons"> <!-- Botões sociais apenas estéticos -->
+          <div class="social-buttons"> 
             <button class="social google">Continuar com Google</button>
             <button class="social facebook">Continuar com Facebook</button>
           </div>
@@ -58,6 +58,6 @@
       </div>
     </div>
   </div>
-  <script src="../js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

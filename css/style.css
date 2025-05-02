@@ -1,49 +1,48 @@
-/* Importa a fonte Poppins novamente para CSS */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 :root {
-  --dark: #ffffff;      /* Cor de texto escuro */
-  --green: #2ecc71;  /* Verde principal */
-  --gray: #000000;      /* Cinza para textos secundários */
-  --light-gray: #f7f7f7; /* Fundo claro */
+  --dark: #ffffff; 
+  --green: #2ecc71; 
+  --gray: #000000;  
+  --light-gray: #f7f7f7;
 }
-/* Zera margens e paddings e define box-sizing */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; /* Aplica fonte */
+  font-family: 'Poppins', sans-serif;
 }
 body {
-  background-color: #f2f2f2; /* Cor de fundo geral */
+  background-color: #f2f2f2;
 }
 .container {
-  display: flex;   /* Flexbox para painéis lado a lado */
-  height: 100vh;   /* Altura total da viewport */
+  display: flex;   
+  height: 100vh;   
 }
 .left-panel {
-  flex: 1; /* Ocupa metade do espaço */
-  background: linear-gradient(135deg, #16a085, #1abc9c); /* Gradiente */
-  color: #fff; /* Texto branco */
+  flex: 1; 
+  background: linear-gradient(135deg, #16a085, #1abc9c); 
+  color: #fff; 
   display: flex;
-  flex-direction: column; /* Conteúdo vertical */
-  justify-content: center; /* Centraliza verticalmente */
-  padding: 2rem; /* Espaçamento interno */
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem; 
 }
 .left-panel ul {
-  list-style: none; /* Remove marcadores padrão */
-  margin-top: 1rem; /* Espaço acima da lista */
+  list-style: none;
+  margin-top: 1rem;
 }
 .left-panel li {
-  font-size: 1rem;   /* Tamanho de texto */
-  margin-bottom: 0.5rem; /* Espaço entre itens */
+  font-size: 1rem; 
+  margin-bottom: 0.5rem; 
   display: flex;
-  align-items: center; /* Alinha emoji e texto */
+  align-items: center; 
 }
 .right-panel {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center; /* Centraliza formulário */
+  align-items: center; 
   background: var(--light-gray);
   padding: 2rem;
 }
@@ -52,8 +51,8 @@ body {
   padding: 2rem;
   width: 100%;
   max-width: 400px;
-  border-radius: 10px; /* Cantos arredondados */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra */
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 h2 {
   margin-bottom: 0.5rem;
@@ -64,16 +63,16 @@ p {
   color: var(--gray);
 }
 .form-label {
-  display: block; /* Coloca label em bloco */
+  display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
   color: var(--dark);
 }
 .login-form input, .register-form input {
-  width: 100%; /* Largura total do contêiner */
+  width: 100%; 
   padding: 0.75rem;
   margin-bottom: 1rem;
-  border: 1px solid #ccc; /* Borda clara */
+  border: 1px solid #ccc;
   border-radius: 5px;
 }
 .login-form button, .register-form button {
@@ -83,23 +82,23 @@ p {
   color: #fff;
   border: none;
   border-radius: 5px;
-  cursor: pointer; /* Mãozinha ao passar */
+  cursor: pointer; 
   font-weight: 500;
-  transition: background 0.3s; /* Animação suave */
+  transition: background 0.3s;
 }
 .login-form button:hover, .register-form button:hover {
-  background: #27ae60; /* Verde mais escuro ao passar */
+  background: #27ae60; 
 }
 .form-options {
   display: flex; 
-  justify-content: space-between; /* Espaça checkbox e link */
+  justify-content: space-between; 
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 .form-options label { 
   display: flex;
-  align-items: center; /* Alinha checkbox */
-  margin-right: 0.5rem;  /* Espaço entre checkbox e texto */
+  align-items: center; 
+  margin-right: 0.5rem;
 }
 .social-buttons {
   display: flex;
@@ -122,16 +121,16 @@ p {
   background: #f0f0f0;
 }
 .social.google::before {
-  content: 'G'; /* Simboliza Google */
+  content: 'G'; 
   font-weight: bold;
   margin-right: 0.5rem;
-  color: #db4437; /* Vermelho Google */
+  color: #db4437; 
 }
 .social.facebook::before {
-  content: 'f'; /* Simboliza Facebook */
+  content: 'f'; 
   font-weight: bold;
   margin-right: 0.5rem;
-  color: #3b5998; /* Azul Facebook */
+  color: #3b5998;
 }
 .toggle-text {
   text-align: center;
