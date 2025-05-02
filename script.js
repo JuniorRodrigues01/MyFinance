@@ -1,14 +1,13 @@
-// Recuperar usuários do localStorage
 function getUsers() {
     return JSON.parse(localStorage.getItem('users') || '[]');
 }
 
-// Salvar usuários no localStorage
+e
 function saveUsers(users) {
     localStorage.setItem('users', JSON.stringify(users));
 }
 
-// Função de cadastro
+
 function handleRegister(event) {
     event.preventDefault();
 
@@ -30,11 +29,11 @@ function handleRegister(event) {
     saveUsers(users);
 
     alert('Cadastro realizado com sucesso!');
-    showLogin(); // Volta para a tela de login
+    showLogin();
     return false;
 }
 
-// Função de login
+
 function handleLogin(event) {
     event.preventDefault();
 
@@ -50,7 +49,7 @@ function handleLogin(event) {
     const user = users.find(u => u.email === email && u.senha === senha);
     if (user) {
         localStorage.setItem('usuarioLogado', JSON.stringify(user));
-        window.location.href = "controlefinanceiro.html"; // Redireciona para o painel
+        window.location.href = "controlefinanceiro.html";
     } else {
         alert('Email ou senha incorretos!');
     }
@@ -58,14 +57,14 @@ function handleLogin(event) {
     return false;
 }
 
-// Mostrar seção de cadastro
+
 function showRegister() {
-    document.querySelector('.login-form').style.display = 'none'; // Esconde login
-    document.getElementById('registerSection').style.display = 'block'; // Mostra cadastro
+    document.querySelector('.login-form').style.display = 'none'; 
+    document.getElementById('registerSection').style.display = 'block';
 }
 
-// Mostrar seção de login
+
 function showLogin() {
-    document.querySelector('.login-form').style.display = 'block'; // Mostra login
-    document.getElementById('registerSection').style.display = 'none'; // Esconde cadastro
+    document.querySelector('.login-form').style.display = 'block'; 
+    document.getElementById('registerSection').style.display = 'none';
 }
