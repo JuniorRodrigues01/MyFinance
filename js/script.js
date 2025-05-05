@@ -33,7 +33,6 @@ function handleRegister(event) {
     return false;
 }
 
-
 function handleLogin(event) {
     event.preventDefault();
 
@@ -68,3 +67,13 @@ function showLogin() {
     document.querySelector('.login-form').style.display = 'block'; 
     document.getElementById('registerSection').style.display = 'none';
 }
+function handleForgotPassword() {
+    const email = prompt("Digite seu e-mail para redefinir a senha:");
+    if (email) {
+      
+      alert(`Instruções para redefinição de senha foram enviadas para: ${email}`);
+    } else {
+      alert("Por favor, insira um e-mail válido.");
+    }
+  }
+  
