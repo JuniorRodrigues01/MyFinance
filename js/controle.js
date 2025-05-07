@@ -49,13 +49,13 @@ function atualizarResumo(lista = transacoes) {
   let saidas = lista.filter(t => t.tipo === 'saida').reduce((acc, t) => acc + t.valor, 0);
   let saldo = entradas - saidas;
 
-  document.getElementById('saldo').innerText = `Saldo: R$${saldo.toFixed(2)}`;
-  document.getElementById('entradas').innerText = `Entradas: R$${entradas.toFixed(2)}`;
-  document.getElementById('saidas').innerText = `Saídas: R$${saidas.toFixed(2)}`;
+  document.getElementById('💰saldo').innerText = `💰Saldo: R$${saldo.toFixed(2)}`;
+  document.getElementById('⬆️💵entradas').innerText = `⬆️💵Entradas: R$${entradas.toFixed(2)}`;
+  document.getElementById('⬇️💸saidas').innerText = `⬇️💸Saídas: R$${saidas.toFixed(2)}`;
 
   if (usuario.orcamento > 0) {
     let porcentagem = (saidas / usuario.orcamento) * 100;
-    document.getElementById('orcamento').innerText = `Orçamento: R$${usuario.orcamento.toFixed(2)} | Usado: ${porcentagem.toFixed(1)}%`;
+    document.getElementById('📋✏️orcamento').innerText = `📋✏️Orçamento: R$${usuario.orcamento.toFixed(2)} | Usado: ${porcentagem.toFixed(1)}%`;
     if (porcentagem > 80) alert('⚠️ Você já gastou mais de 80% do orçamento!');
   }
 }
